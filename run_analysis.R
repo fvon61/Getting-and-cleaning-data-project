@@ -60,9 +60,15 @@ for (currentActivityLabel in activity_labels$V2) {
 AllData$activity <- as.factor(AllData$activity)
 AllData$subject <- as.factor(AllData$subject)
 
+#create tidy tasble
 tidy = aggregate(AllData, by=list(activity = AllData$activity, subject=AllData$subject), mean)
+
 # Remove the subject and activity column, since a mean of those has no use
 tidy[,88] = NULL
 tidy[,87] = NULL
+
+#Print tidy table to tidy.txt
 write.table(tidy, "tidy.txt", sep="\t", row.name=FALSE)
+
+#look at tidy table
 View(tidy)
