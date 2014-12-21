@@ -1,6 +1,10 @@
 Getting-and-cleaning-data-project
 =================================
 
+F.M. v. Recklinghausen
+
+December 20, 2014
+
 getting and cleaning data course project
 
 The following describes how the code works:
